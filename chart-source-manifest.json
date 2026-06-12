@@ -42,6 +42,11 @@
       "owner": "gopay-app",
       "source": "gopay-app/workflows/n8n",
       "required": false
+    },
+    {
+      "owner": "wa-app",
+      "source": "wa-app/workflows/n8n",
+      "required": false
     }
   ]
 }

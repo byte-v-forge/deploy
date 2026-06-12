@@ -222,6 +222,7 @@ services:
       - ../gpt/workflows/n8n:/workflow-sources/public:ro
       - ../gpt-private/workflows/n8n:/workflow-sources/private:ro
       - ../gopay-app/workflows/n8n:/workflow-sources/gopay:ro
+      - ../wa-app/workflows/n8n:/workflow-sources/wa:ro
       - ./iac/helm/byte-v-forge/files/n8n-sync-workflow-folders.js:/opt/byte-v-forge/sync-workflow-folders.js:ro
     command:
       - sh
@@ -229,7 +230,7 @@ services:
       - |
         rm -rf /tmp/n8n-workflows
         mkdir -p /tmp/n8n-workflows
-        for source in /workflow-sources/public /workflow-sources/private /workflow-sources/gopay; do
+        for source in /workflow-sources/public /workflow-sources/private /workflow-sources/gopay /workflow-sources/wa; do
           [ -d "$$source" ] && cp -R "$$source"/. /tmp/n8n-workflows/
         done
         workflow_files() {
