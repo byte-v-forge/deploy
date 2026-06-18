@@ -63,6 +63,29 @@
       ]
     },
     {
+      "id": "wa-app",
+      "name": "WA App",
+      "remoteName": "wa_app",
+      "remoteEntry": "/mf/wa/remoteEntry.js",
+      "exposedModule": "./dashboardModule",
+      "apiBase": "/api/wa",
+      "service": "wa-app-service",
+      "ownerRepo": "wa-app",
+      "sourceDir": "wa-app/webui",
+      "sourceManifest": "wa-app/webui/src/dashboard/manifest.tsx",
+      "mfPrefix": "/mf/wa",
+      "apiPrefix": "/api/wa",
+      "enabled": true,
+      "navKey": "wa",
+      "navLabel": "WA",
+      "navIcon": "message-circle",
+      "navSection": "main",
+      "navOrder": 18,
+      "requiredServices": [
+        "wa-app-service"
+      ]
+    },
+    {
       "id": "workflow-runtime",
       "name": "Workflow Runtime",
       "remoteName": "workflow_runtime",
@@ -121,7 +144,7 @@
         "wa-app-service"
       ],
       "order": 18,
-      "enabled": true
+      "enabled": false
     },
     {
       "id": "sms",
